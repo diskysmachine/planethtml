@@ -1,0 +1,81 @@
+.plane{
+    position: absolute;
+    width: 120px; 
+    height: 100px;
+}
+
+.fly {
+	background: url(img/fly.png) no-repeat left center;
+	width: 36px;
+	height: 34px;
+	display: block;
+	z-index: 5;
+	position: absolute;
+	left: -100px;
+	background-position: -138px 0;
+	transform: translate(-50%, -50%);
+}
+body{
+    background-image: url(img/fon.png);
+	overflow: hidden;
+	
+}
+
+.object{
+		padding:0px 1000px 50px 0;
+		animation-name: move2;
+		animation-duration: 5s;
+		animation-iteration-count: 1000;
+
+}
+.object2{
+	padding:0px 1000px 50px 0;
+	animation-name: move3;
+	animation-duration: 5s;
+	animation-iteration-count: 1000;
+
+}
+
+@keyframes move2{
+    10% {transform: translateX(100px);}
+
+      100% {transform: translateX(1000px);}
+
+    }
+
+	@keyframes move3{
+		10% {
+			top:50px;
+		}
+        30%{
+			top: 200px;
+		}
+	
+		  100% {
+			  top: 500px;}
+	
+		}
+
+
+@keyframes utkaFly{
+	0%{
+		left: 150%;
+		top: 10%;
+	}
+	25%{
+		left: 80%;
+		top: 50%;
+	}
+	50%{
+		left: 50%;
+		top: 30%;
+	}
+	75%{
+		left: 30%;
+		top: 40%;
+	}
+	100%{
+		left: -50%;
+		top: 10%;
+	}
+}
