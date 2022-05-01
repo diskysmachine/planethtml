@@ -1,7 +1,7 @@
+'use strict';
 // 1 +
 const plane = document.getElementById("plane");
-const oblako = document.getElementById("object");
-const oblako2 = document.getElementById("object2");
+const oblako = document.querySelector(".object")
 
 
 const speed = 10;
@@ -15,14 +15,11 @@ plane.style.top = posY + 'px';
 const windowWidth = document.documentElement.offsetWidth
 const planetWidth = plane.offsetWidth
 
-const oblakoWidth = oblako.offsetWidth
-const oblakoWidth2 = oblako2.offsetWidth
-
 const windowHeight = document.documentElement.clientHeight
 const planetHeight = plane.offsetHeight
 
 const oblakoHeight = oblako.offsetHeight
-const oblakoHeight2 = oblako2.offsetHeight
+const oblakoWidth = oblako.offsetWidth
 
 
 
@@ -57,6 +54,16 @@ document.addEventListener('keydown', function(event) {
   if (posY <= 0 && event.code === 'KeyW') {
     return
   }
+
+
+
+  //первое облако
+
+  document.addEventListener('keydown',function(event) {
+    if (posX  >= 885 && poxY >= 138.25){
+      return
+    }
+  })
 
 
   // изменение координат самолета

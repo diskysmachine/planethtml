@@ -22,10 +22,13 @@ body{
 }
 
 .object{
-		padding:0px 1000px 50px 0;
-		/* animation-name: move2; */
-		animation-duration: 5s;
-		animation-iteration-count: 1000;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* animation-name: move2; */
+	animation-duration: 5s;
+	animation-iteration-count: 1000;
 }
 .object2{
 	padding:0px 1000px 50px 0;
