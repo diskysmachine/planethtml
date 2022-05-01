@@ -1,7 +1,9 @@
-'use strict';
-
 // 1 +
 const plane = document.getElementById("plane");
+const oblako = document.getElementById("object");
+const oblako2 = document.getElementById("object2");
+
+
 const speed = 10;
 let posX = 100;
 let posY = 100;
@@ -9,17 +11,29 @@ let posY = 100;
 plane.style.left = posX + 'px';
 plane.style.top = posY + 'px';
 
+
 const windowWidth = document.documentElement.offsetWidth
 const planetWidth = plane.offsetWidth
 
+const oblakoWidth = oblako.offsetWidth
+const oblakoWidth2 = oblako2.offsetWidth
+
 const windowHeight = document.documentElement.clientHeight
 const planetHeight = plane.offsetHeight
+
+const oblakoHeight = oblako.offsetHeight
+const oblakoHeight2 = oblako2.offsetHeight
+
+
+
+
 
 // 1 - найти картинку с которой будем работать
 // 2 - обрабатывать события нажатия на клавиши
 // 3 - изменять координаты картинки (plane) в зависимости от выбранной клавиши
 // 4 - обозначить пределы перемещения +
 // 5 - убивать, если натыкается на облако
+// 6 - не давать врезаться в облако
 
 // 2 +
 document.addEventListener('keydown', function(event) {
@@ -43,6 +57,7 @@ document.addEventListener('keydown', function(event) {
   if (posY <= 0 && event.code === 'KeyW') {
     return
   }
+
 
   // изменение координат самолета
   // 3 +
